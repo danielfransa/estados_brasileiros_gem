@@ -11,3 +11,4 @@
 .rspec_status
 
 database/*.sqlite3*
+*.gem
