@@ -1,39 +1,40 @@
 # EstadosBrasileirosActiveRecord
 
-TODO: Delete this and the text below, and describe your gem
+## Descrição
+A Estados Brasileiros Active Record é uma gem desenvolvida para facilitar a criação dos 27 estados brasileiros em projetos Ruby on Rails. Ao instalar esta gem, você automaticamente gera um model Estado, uma migration para criar a tabela correspondente e um rake task que popula a tabela com os nomes dos estados brasileiros.
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/estados_brasileiros_active_record`. To experiment with that code, run `bin/console` for an interactive prompt.
+## Funcionalidades
+    **Model Estado:** Um model básico para representar os estados brasileiros.
+    **Migration:** Cria a tabela estados no banco de dados, com colunas para o nome e sigla do estado.
+    **Rake Task:** Uma tarefa rake para popular a tabela estados com os 27 estados do Brasil.
 
-## Installation
+## Motivação
+Este projeto foi desenvolvido como parte de um treinamento em Ruby on Rails na plataforma DIO, com o intuito de simplificar o processo de criação dos estados brasileiros em novos projetos Rails.
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
+## Instalação
 
-Install the gem and add to the application's Gemfile by executing:
+Adicionar a gem no Gemfile:
 
-    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+```ruby
+gem 'estados_brasileiros_active_record', git: "https://github.com/danielfransa/estados_brasileiros_gem.git"
+```
 
-If bundler is not being used to manage dependencies, install the gem by executing:
+Rodar o comado:
+```sh
+bundle install
+```
 
-    $ gem install UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+Rodar o generate:
+```sh
+rails g estados_brasileiros_active_record:install
+```
 
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/estados_brasileiros_active_record. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/estados_brasileiros_active_record/blob/master/CODE_OF_CONDUCT.md).
+Rodar a rake:
+```sh
+rake impotacao_estados:importar
+```
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
-## Code of Conduct
-
-Everyone interacting in the EstadosBrasileirosActiveRecord project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/estados_brasileiros_active_record/blob/master/CODE_OF_CONDUCT.md).
